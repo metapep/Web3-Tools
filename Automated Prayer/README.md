@@ -6,9 +6,11 @@ https://docs.chimera.meme/
 2. cp .env.example .env
 3. add your pub key, private key, and sendgrid api key, and email addresses
 4. run python3 pray.py to test
-5. add cron job to run every 8 hours and 15 min
+5. add cron job to run every 9 hours
 
-_/495 _ \* \* \* /home/path/scripts/pray.py
+```
+0 */9 * * * /home/path/scripts/pray.py >> pray.log 2>&1
+```
 
 Free Sendgrid Account: https://sendgrid.com/content/sendgrid/global/en-us <br /> Cheap Linode VPS: https://www.linode.com/lp/refer/?r=f3ca61cdfdd1bda1b8a67f7e0c70b4f986e3b572
 
